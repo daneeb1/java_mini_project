@@ -82,11 +82,12 @@ public class UserDao {
 		ResultSet resultSet = null;
 		try {
 			conn = DBConnection.getConnection();
-			System.out.println(conn);
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, userName);
 			pstmt.setString(2, password);
 			resultSet = pstmt.executeQuery();
+			
+			
 			if (resultSet.next()) {
 				return 1;
 			} else {

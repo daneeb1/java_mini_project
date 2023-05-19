@@ -26,7 +26,7 @@ public class DBConnection {
 			Connection conn = 
 					DriverManager.getConnection(driver, id, pass);
 			
-			System.out.println("DB 연결 성");
+			System.out.println("DB 연결 성공");
 			return conn;
 		} catch (Exception e) {
 			System.out.println(TAG + "DB 연결 실패" + e.getMessage());
